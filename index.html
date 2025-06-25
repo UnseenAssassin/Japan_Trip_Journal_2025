@@ -22,6 +22,27 @@
 </head>
 <body class="bg-pattern">
 
+  <!--  AUDIO PLAYER + BUTTON -->
+    <audio id="bg-music" src="Music/Chillpeach - Espresso.mp3" loop></audio>
+    <div class="fixed top-4 right-4 z-50">
+        <button id="play-btn" class="bg-red-600 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition">
+            Play Music
+        </button>
+    </div>
+
+    <!--  JS TO TRIGGER PLAY -->
+    <script>
+        document.getElementById('play-btn').addEventListener('click', function () {
+            const audio = document.getElementById('bg-music');
+            audio.play().then(() => {
+                this.style.display = 'none'; // hide button after play
+            }).catch(err => {
+                console.log('Autoplay error:', err);
+            });
+        });
+    </script>
+
+
     <div class="min-h-screen bg-gray-50/95 backdrop-blur-sm flex flex-col items-center justify-center p-4">
         
         <!-- Header -->
@@ -122,19 +143,19 @@
                     <!-- Day 14 -->
                     <a href="Day14.html" class="day-button bg-sky-500">
                         <span class="day-number">Day 14</span>
-                        <span class="day-text">Tokyo</span>
+                        <span class="day-text">Tokyo(Anh and Z Days)</span>
                     </a>
 
                     <!-- Day 15 -->
                     <a href="Day15.html" class="day-button bg-orange-500">
                         <span class="day-number">Day 15</span>
-                        <span class="day-text">Tokyo</span>
+                        <span class="day-text">Tokyo(Anh and Z Days)</span>
                     </a>
 
                     <!-- Day 16 -->
                     <a href="Day16.html" class="day-button bg-rose-500">
                         <span class="day-number">Day 16</span>
-                        <span class="day-text">View Entry</span>
+                        <span class="day-text">Tokyo/Narita(Anh and Z Days)</span>
                     </a>
                 </div>
 
